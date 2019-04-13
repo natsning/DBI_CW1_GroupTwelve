@@ -49,8 +49,8 @@
     <hr id="insert">
         <form action="insert_actor.php" method="POST">
         <b>Insert actor: </b></br>
-        First Name: <input type="text" name="first_name"/><br /></br>
-        Last Name: <input type="text" name="last_name"/><br />
+        First Name:     <input type="text" name="first_name"/><br /></br>
+        Last Name:      <input type="text" name="last_name"/><br />
         <input type="submit" name="insert" value=" Insert "/>
     </form>
     
