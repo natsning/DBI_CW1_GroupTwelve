@@ -6,7 +6,7 @@
 		$city_id = $_GET['city_id'];
 		$sql= "DELETE FROM city WHERE city_id='$city_id'";
 		if($city_id!="" && mysql_query($sql))
-{
+{       mysql_query("ALTER TABLE city AUTO_INCREMENT=1");
 		echo '<script>alert("Deleted");</script>';
 	    echo "<meta http-equiv='refresh' content='0;url=select_city.php'>";
 	  }

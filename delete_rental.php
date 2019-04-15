@@ -6,7 +6,7 @@
 		$rental_id = $_GET['rental_id'];
 		$sql= "DELETE FROM rental WHERE rental_id='$rental_id'";
 		if($rental_id!="" && mysql_query($sql))
-{
+{       mysql_query("ALTER TABLE rental AUTO_INCREMENT=1");
 		echo '<script>alert("Deleted");</script>';
 	    echo "<meta http-equiv='refresh' content='0;url=select_rental.php'>";
 	  }

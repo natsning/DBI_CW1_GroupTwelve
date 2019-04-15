@@ -6,7 +6,8 @@
 		$staff_id = $_GET['staff_id'];
 		$sql= "DELETE FROM staff WHERE staff_id='$staff_id'";
 		if(	$staff_id!="" && mysql_query($sql))
-{
+        {
+        mysql_query("ALTER TABLE staff AUTO_INCREMENT=1");
 		echo '<script>alert("Deleted");</script>';
 	    echo "<meta http-equiv='refresh' content='0;url=select_staff.php'>";
 	  }

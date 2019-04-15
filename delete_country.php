@@ -6,7 +6,7 @@
 		$country_id = $_GET['country_id'];
 		$sql= "DELETE FROM country WHERE country_id='$country_id'";
 		if($country_id!="" && mysql_query($sql))
-{
+{       mysql_query("ALTER TABLE country AUTO_INCREMENT=1");
 		echo '<script>alert("Deleted");</script>';
 	    echo "<meta http-equiv='refresh' content='0;url=select_country.php'>";
 	  }

@@ -6,7 +6,7 @@
 		$film_id = $_GET['film_id'];
 		$sql= "DELETE FROM film WHERE film_id='$film_id'";
 		if($film_id!="" && mysql_query($sql))
-{
+{       mysql_query("ALTER TABLE film AUTO_INCREMENT=1");
 		echo '<script>alert("Deleted");</script>';
 	    echo "<meta http-equiv='refresh' content='0;url=select_film.php'>";
 	  }
